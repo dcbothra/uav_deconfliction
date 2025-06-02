@@ -58,20 +58,20 @@ def main():
     drone1_speed = 5         # m/s
     drone1_waypoints = [
         # No Conflict
-        # (37, 1, 2),
-        # (5, 5, 34),
-        # (11, 11, 6),
-        # (89, 77, 40),
-        # (94, 99, 120),
-        # (73, 100, 2)
-
-        # Conflict
         (37, 1, 2),
         (5, 5, 34),
-        (11, 50, 6),
-        (89, 50, 40),
-        (94, 5, 120),
+        (11, 11, 6),
+        (89, 77, 40),
+        (94, 99, 120),
         (73, 100, 2)
+
+        # Conflict
+        # (37, 1, 2),
+        # (5, 5, 34),
+        # (11, 50, 6),
+        # (89, 50, 40),
+        # (94, 5, 120),
+        # (73, 100, 2)
     ]
     start_time = datetime.now()
     
@@ -113,7 +113,6 @@ def main():
     print("\nGenerating visualizations...")
     visualize_paths_3d(missions, conflicts)  # 3D visualization
     visualize_mission_4d(flight_paths, conflicts)  # 4D visualization
-
 
 if __name__ == "__main__":
     main() 
